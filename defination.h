@@ -1,7 +1,6 @@
-#ifndef FARMAT_H_
-#define FARMAT_H_
+#ifndef DEFINATION_H_
+#define DEFINATION_H_
 #include <stdbool.h>
-#define MAX 20
 typedef struct list
 {
     int num;
@@ -72,7 +71,7 @@ Node * FindExpPrevious(Item i, List L)
     Node * scan = (Node*) L;
     while (scan->next != NULL)
     {
-        if (scan->item.num == i.num)
+        if (scan->next->item.num == i.num)
             return scan;
         scan = scan->next;
     }
